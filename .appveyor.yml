@@ -1,0 +1,18 @@
+image: Ubuntu1804 #образ для сборки
+
+stack: node 12
+
+branches:
+    only:
+      - master 
+
+cache: node_modules
+
+install:
+  - npm install
+
+buil: off
+
+test_script: 
+  - npm run lint && npm run test
+  
